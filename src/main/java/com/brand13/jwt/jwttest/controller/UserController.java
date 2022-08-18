@@ -30,6 +30,11 @@ public class UserController {
         response.sendRedirect("/api/user");
     }
 
+    /**
+     * 회원가입
+     * @param userDto
+     * @return
+     */
     @PostMapping("/signup")
     public ResponseEntity<UserDto> signup(
             @Valid @RequestBody UserDto userDto
