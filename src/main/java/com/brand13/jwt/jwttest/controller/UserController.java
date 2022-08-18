@@ -42,6 +42,11 @@ public class UserController {
         return ResponseEntity.ok(userService.signup(userDto));
     }
 
+    /**
+     * 사용자 정보
+     * @param request
+     * @return
+     */
     @GetMapping("/user")
     @PreAuthorize("hasAnyRole('USER','ADMIN')")
     public ResponseEntity<UserDto> getMyUserInfo(HttpServletRequest request) {
